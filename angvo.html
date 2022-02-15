@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Angvo</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel=icon type=image/png sizes=16x16 href=images/small-icon.png>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <style>
+    .whatsapp {
+        position: fixed;
+        right: 2px;
+        bottom: 7px;
+        font-size: 40px;
+        padding: 18px 20px 18px 20px;
+        background: #0cff1f;
+        border-radius: 80%;
+        margin-right: 20px;
+        margin-top: -90px;
+
+    }
+
+    .form-button {
+        border: none;
+        background: #fc5546;
+        color: white;
+        margin-left: -2px;
+    }
+
+    .text-justify {
+        text-align: justify;
+    }
+
+    .line-height {
+        line-height: 25pt;
+    }
+
+    .text-color {
+        color: white;
+    }
+
+    .text-hover:hover {
+        color: #fd7e14;
+    }
+
+    .card-icon {
+        background: #f86e03;
+        height: 70px;
+        width: 70px;
+        text-align: center;
+        line-height: 70px;
+        border-radius: 50%;
+        font-size: 30px;
+        color: #fff;
+    }
+
+    .header-icon {
+        background-color: black;
+        border-radius: 100%;
+        padding: 10px;
+        color: white;
+    }
+
+    .header-icon:hover {
+        background: white;
+        color: #ff5722;
+    }
+
+    .footer-icon {
+        background-color: #14346b;
+        border-radius: 20%;
+        padding: 10px;
+        color: #4a70b1;
+    }
+
+    .footer-icon:hover {
+        background: #ff5722;
+        color: white;
+    }
+
+    .footer-info {
+        font-size: 30px;
+        background: #14346b;
+        padding: 20px 25px 20px 25px;
+        color: #4a70b1;
+        border-radius: 100%;
+    }
+
+    .footer-info:hover {
+        background: #ff5722;
+        color: white;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open>.dropdown-toggle.btn-primary {
+        color: #fff;
+        background-color: #00b3db;
+        border-color: #285e8e;
+        /*set the color you want here*/
+    }
+
+    .footer-hover:hover .footer-info {
+        background: white;
+        color: #f86e03;
+    }
+
+    .card-icon:hover {
+        background: white;
+        color: #f86e03;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open>.dropdown-toggle.btn-primary {
+        color: #fff;
+        background-color: #00b3db;
+        border-color: #285e8e;
+        /*set the color you want here*/
+    }
+
+    .toggle-btn {
+        position: absolute;
+        right: 0px;
+        top: 16px;
+    }
+
+    .mobile-cart-icon {
+        display: none;
+    }
+
+    .box {
+        /*background: white;
+            width: 100%;
+            height: 300px;
+            border-radius: 5%;*/
+    }
+
+    .hoverable:hover .card-icon {
+        background: white;
+        color: #f86e03;
+    }
+
+    .hoverable:hover {
+        background: #f86e03;
+        color: white;
+        border: 1px solid #f86e03;
+    }
+
+    .font-size-13 {
+        font-size: 13px;
+    }
+
+    @media (max-width:480px) {
+        .icons {
+            display: none !important;
+        }
+        .display-btn {
+            display: none;
+        }
+
+        .logo-img {
+            height: 45px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .pad-top {
+            padding-top: 20px;
+        }
+
+        .f-s {
+            font-size: 19px;
+        }
+
+    }
+
+    @media (max-width:768px) {
+        .mobile-cart-icon {
+            display: block;
+            font-size: 36px;
+            position: absolute;
+            right: 74px;
+            top: 7px;
+        }
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <style type="text/css">
+    .testimonial {
+        border: 10px solid #662a66;
+        padding: 40px 0 25px 0;
+        margin: 50px;
+        text-align: center;
+        position: relative;
+    }
+
+    .testimonial:before {
+        content: "\f10d";
+        font-family: "Font Awesome 5 Free";
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        background: #fff;
+        margin: 0 auto;
+        font-size: 70px;
+        font-weight: 900;
+        color: #f1971f;
+        position: absolute;
+        top: -60px;
+        left: 0;
+        right: 0;
+    }
+
+    .testimonial .title {
+        padding: 7px 0;
+        margin: 0 -30px 20px;
+        border: 7px solid #fff;
+        background: #e8326f;
+        font-size: 22px;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .testimonial .title:before {
+        content: "";
+        border-top: 15px solid #662a66;
+        border-left: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        position: absolute;
+        bottom: -37px;
+        left: 0;
+    }
+
+    .testimonial .title:after {
+        content: "";
+        border-top: 15px solid #662a66;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        position: absolute;
+        bottom: -37px;
+        right: 0;
+    }
+
+    .testimonial .post {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        text-transform: capitalize;
+    }
+
+    .testimonial .description {
+        padding: 0 20px;
+        margin: 0;
+        font-size: 15px;
+        color: #6f6f6f;
+        letter-spacing: 1px;
+        line-height: 30px;
+    }
+
+    .owl-theme .owl-controls {
+        margin-top: 0;
+    }
+
+    .owl-theme .owl-controls .owl-buttons div {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 35px;
+        background: #f1971f;
+        color: #fff;
+        border-radius: 0;
+        margin-right: 5px;
+        opacity: 1;
+    }
+
+    .owl-prev:before,
+    .owl-next:before {
+        content: "\f060";
+        font-family: "Font Awesome 5 Free";
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    .owl-next:before {
+        content: "\f061";
+    }
+
+    @media only screen and (max-width: 990px) {
+        .testimonial {
+            margin: 30px;
+        }
+    }
+
+    .hight-class {
+        height: 310px !important;
+    }
+    </style>
+    <div class="container-fluid p-0">
+        <div class="col-md-12" style="background:#ff5722;">
+            <div class="container p-2">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <span class="text-white">Turning Brands into Amazon Best Sellers</span>
+                    </div>
+                    <div class="col-md-6 icons">
+                        <a href="#" class="rounded-circle bg-primary"><i class="pull-right m-1 fa fa-instagram header-icon "></i></a>
+                        <a href="#"><i class="pull-right m-1 fa fa-twitter header-icon"></i></a>
+                        <a href="#"><i class="pull-right m-1 fa fa-facebook header-icon"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 sticky-top " style="background:white;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a href="#" class="navbar-brand">
+                        <img class="logo-img" src="images/logo.png" alt="Logo" height="70">
+                    </a>
+                    <div class="container-fluid">
+                        <button class="navbar-toggler toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <i class="fa fa-shopping-cart p-2 mobile-cart-icon"></i>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item"><a href="#" class="nav-link h4">Home</a></li>
+                                <li class="nav-item"><a href="angvo-about.html" class="nav-link h4">About</a></li>
+                                <li class="nav-item"><a href="angvo-services.html" class="nav-link h4">Services</a></li>
+                                <li class="nav-item"><a href="https://wa.me/+923019115376?text=I want to contact with you through angvo." target="_blank" class="nav-link h4">Contact</a></li>
+                                <li class="nav-item"><a href="angvo-login.html" class="nav-link h4">Login</a></li>
+                                <li class="nav-item"><a href="angvo-register.html" class="nav-link h4">Registers</a></li>
+                                <a href="angvo-services.html" class="btn btn-primary hoverable display-btn ms-5"> LET'S GET STARTED</a>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/img-1.jpg" alt="Los Angeles" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="images/img-2.jpg" alt="Chicago" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="images/img-3.jpg" alt="New York" class="d-block w-100">
+            </div>
+        </div>
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <div class="col-md-12 pb-5 text-center" style="background:#182c53;">
+        <div class="container">
+            <h1 class="text-white text-center pt-5">One-Stop-Shop Services</h1>
+            <p class=" display-5 text-center text-white">For Amazon <span class="text-warning">Sellers</span></p>
+            <p class="text-white text-center fs-3">Our Services</p>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-map-marker  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-3">UK Physical <br>Address</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-plus  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-3">UK LTD Formation</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-plus  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-3">US LLC Formation</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-amazon  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-3">A to Z Amazon<br> Account</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-server  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-2">VPS</p><br>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-star  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-4">WALMART Account</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-handshake-o  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-2">3 PL Services</p><br>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-university  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-4">Accounting<br>Package</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-wrench  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-3">Amazon <br> Tools</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-flash  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-3">Reinstate Services</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-university  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-3">UK VAT Registration</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-registered  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-3">UK Trademark</p><br><br>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-university  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-4">Virtual Bank<br> Accounts</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-address-card-o  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-4">UK/US Physical <br>Sim</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-list  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-4">Listing creation <br>and Optimization</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-search  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-3">Product Research</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-search  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-3">Patent Check</p><br><br>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-heartbeat  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-2">Website <br>Development</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-university  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-2">Confirmation <br>Statement</p>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card  text-center hoverable hight-class my-3">
+                        <div class="mt-5">
+                            <i class="fa fa-paypal  fs-1 card-icon  align-middle"></i>
+                        </div>
+                        <p class=""></p>
+                        <div class="card-body">
+                            <p class="card-text fs-3">PAYPAL</p><br><br>
+                            <p>Buy Now</p>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <a href="angvo-services.html" class="btn btn-primary hoverable">View All Services <i class="fa fa-arrows-h"></i></a>
+        </div>
+    </div><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="images/men-walk.jpg" width="100%" class="text-center">
+            </div>
+            <div class="col-md-6">
+                <div class="text-center">
+                    <p class="display-5 opacity-75">Perfect Solution Makes</p>
+                    <p class="display-4 "><strong>A Successful<span class="text-warning">History</span></strong> </p><br>
+                    <p class="h4 opacity-75">Something knows About Our Company</p>
+                    <hr>
+                    <p class="opacity-75 ">We want our nation to become strong enough to compete in the arena of International market. That can only happen when we will have the familiaity with the new trends trade. We develop opportunities for people who have urge in them to excel in their lives. We provide them a direction which leads them to success. Take a step forward and grab unlimited opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-6">
+                <img src="images/amazon-img.jpg" width="100%">
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <p class="display-5 opacity-50">Get A Quote</p>
+                    <p class="display-4"><strong>Free</strong> <span class="text-danger">Consultations</span></p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label h4">Full Name Here</label>
+                            <input type="text" class="form-control" id="name" placeholder="eg. Shakeel Ahmad">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact" class="form-label h4">Contact Number</label>
+                            <input type="text" class="form-control" id="contact" placeholder="eg. 0301-4962381">
+                        </div>
+                        <div class="mb-3">
+                            <label for="discussion" class="form-label h4">I Would Like To Discuss</label>
+                            <input type="text" class="form-control" id="discussion" placeholder="I'm Talking About">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment" class="form-label h4">Leave A Message</label>
+                            <textarea class="form-control" rows="5" cols="4" id="comment" placeholder="Write Message"></textarea>
+                        </div><br>
+                        <button type="submit" class="btn btn-primary pull-right hoverable">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" style="background: #eef3f9;">
+        <div class="container">
+            <div class="text-center py-5">
+                <p class="display-4 opacity-75">How We Works</p>
+                <p class="display-3"><strong>Customer</strong> <span class="text-warning">Reviews</span></p>
+                <p class="h4 opacity-75">knows About Our Customer Say</p>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="testimonial-slider" class="owl-carousel">
+                    <div class="testimonial">
+                        <h3 class="title">Mehar Sahib
+                            <span class="post">- SEO</span>
+                        </h3>
+                        <p class="description">
+                            Sometimes we feel hesitate to trust a company with which we have not worked before. Same was the feeling of mine but before working with Angvo I checked their profile thoroughly.
+                        </p>
+                    </div>
+                    <div class="testimonial">
+                        <h3 class="title">Mehar Waheed
+                            <span class="post">- Web Developer</span>
+                        </h3>
+                        <p class="description">
+                            I can surely that their teachings got me out of many troubles. Sometimes I got really puzzled when I fell my account was not working in a proper way. Angvo sorted out my
+                        </p>
+                    </div>
+                    <div class="testimonial">
+                        <h3 class="title">Shakeel Ahmad
+                            <span class="post">- Web Developer</span>
+                        </h3>
+                        <p class="description">
+                            Now I do not have to face that panic which I used to bear in the start of my business. Things are good now because of Angvo. Before contacting this company,
+                        </p>
+                    </div>
+                    <div class="testimonial">
+                        <h3 class="title">Akhlaq Ahmed
+                            <span class="post">- Web Developer</span>
+                        </h3>
+                        <p class="description">
+                            In difficult times, when you find someone who can get you out of the problem and shows you the clear path to explore then there you find the opportunity. I found the one
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="background: #182c53;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img src="images/logo-footer.png" class="p-5">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="text-white text-justify" style="padding-top: 40px;">We are here to start your business on Amazon and make your efforts as profitable as possible. We do this by providing great Services at an affordable price and backed up by the best customer service and support available.</p>
+                        <div>
+                            <a href="#" class="rounded-circle"><i class="m-1 fa fa-instagram footer-icon "></i></a>
+                            <a href="#"><i class="m-1 fa fa-twitter footer-icon"></i></a>
+                            <a href="#"><i class="m-1 fa fa-facebook footer-icon"></i></a>
+                        </div>
+                    </div><br>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <h3 class="text-white mt-4">Quick Links</h3>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#!" class="text-color text-decoration-none line-height text-hover">Services</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-color text-decoration-none line-height text-hover">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-color text-decoration-none line-height text-hover">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-color text-decoration-none line-height text-hover">General Complaint</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-white mt-4">Subscribe Now</h3>
+                        <p class="text-white">Please subscribe now for special<br> notifications and offers</p>
+                        <form class="d-flex">
+                            <input type="emial" name="email" placeholder="Enter Email Address" class="p-3" style="width:80%;">
+                            <button type="submit" class="form-button" style="width:20%;"><i class="far fa-paper-plane fs-5 "></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div><br><br>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-lg-3 col-xs-6">
+                        <div class="row">
+                            <div class="col-md-4 text-center pad-top">
+                                <i class="fa fa-map-marker footer-info"></i>
+                            </div><br><br>
+                            <div class="col-md-8 footer-hover pad-top">
+                                <h4 class="title text-white footer-hover center">Address</h4>
+                                <p class="text-white footer-hover center f-s">5th Floor Al Hafeez Heights Gulberg III, Lahore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3 col-xs-6">
+                        <div class="row">
+                            <div class="col-md-4 text-center pad-top">
+                                <i class="fa fa-envelope footer-info"></i>
+                            </div>
+                            <div class="col-md-8 pad-top">
+                                <h4 class="title text-white center">Email Us</h4>
+                                <p class="center"><a href="mailto:meharshakeel9114@gmail.com" class="text-decoration-none text-white center f-s font-size-13">meharshakeel9114@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3 col-xs-6">
+                        <div class="row">
+                            <div class="col-md-4 text-center pad-top">
+                                <i class="fa fa-phone footer-info"></i>
+                            </div>
+                            <div class="col-md-8 pad-top">
+                                <h4 class="title text-white center">Contact Us</h4>
+                                <p class="center"><a href="tel:+92301-4962381" class="text-white text-decoration-none f-s">+92301-4962381</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-3 col-xs-6">
+                        <div class="row">
+                            <div class="col-md-4 text-center pad-top">
+                                <i class="fa fa-clock-o footer-info"></i>
+                            </div>
+                            <div class="col-md-8 pad-top">
+                                <h4 class="title text-white center">Opening Hour</h4>
+                                <p class="text-white center f-s">Mon-Friday, 9AM-5PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="text-white">
+            <div class="footer-copyright text-center py-3 text-white">© 2021 Copyright:Design By <p class="text-warning">Shakeel Ahmad</p>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/+923019115376?text=I want to contact with you through angvo." target="_blank"><i class="fa fa-whatsapp whatsapp text-white"></i></a>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#testimonial-slider").owlCarousel({
+        items: 3,
+        itemsDesktop: [1000, 2],
+        itemsDesktopSmall: [979, 2],
+        itemsTablet: [768, 1],
+        pagination: false,
+        navigation: true,
+        navigationText: ["", ""],
+        autoPlay: true
+    });
+});
+</script>
+
+</html>

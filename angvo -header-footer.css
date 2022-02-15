@@ -1,0 +1,98 @@
+
+        .whatsapp {
+            position: fixed;
+            left: 2px;
+            bottom: 7px;
+            font-size: 40px;
+           padding: 18px 20px 18px 20px;
+           background: #0cff1f;
+           border-radius: 80%;
+           margin-right: 20px;
+           margin-top: -90px;
+
+        }
+        .form-button {
+            border: none;
+            background: #fc5546;
+            color: white;
+            margin-left: -2px;
+        }
+        .text-justify {
+            text-align: justify;
+        }
+        .line-height {
+            line-height: 25pt;
+        }
+        .text-color {
+            color: white;
+        }
+        .text-hover:hover{
+            color: #fd7e14;
+        }
+        .header-icon {
+  background-color: black;
+  border-radius: 100%;
+  padding: 10px;
+  color: white;
+}
+.header-icon:hover {
+    background: white;
+    color: #ff5722;
+}
+.footer-icon {
+  background-color: #14346b;
+  border-radius: 20%;
+  padding: 10px;
+  color: #4a70b1;
+}
+.footer-icon:hover {
+    background:#ff5722;
+    color: white;
+}
+.footer-info {
+         font-size: 30px;
+         background: #14346b;
+         padding: 20px 25px 20px 25px;
+         color: #4a70b1;
+         border-radius: 100%;
+}
+.footer-info:hover{
+    background:#ff5722;
+    color: white;
+}
+  .footer-hover:hover .footer-info {
+            background:white;
+            color:#f86e03 ; 
+        }
+        .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #00b3db;
+    border-color: #285e8e; /*set the color you want here*/
+}
+        .toggle-btn {
+        position: absolute; right: 0px;top: 16px;
+       }
+       .mobile-cart-icon {
+           display: none;
+        }
+        .hoverable:hover {
+            background:#f86e03; 
+            color: white;
+            border: 1px solid #f86e03;
+        }
+       @media (max-width:480px) {
+        .icons {
+          display: none!important;
+        }
+        .logo-img {
+          height: 45px;
+        }
+        
+       } 
+       @media (max-width:768px) {
+        .mobile-cart-icon {
+          display: block;
+           font-size: 36px;position: absolute;right: 74px;top: 7px;
+        }
+       }
+  
